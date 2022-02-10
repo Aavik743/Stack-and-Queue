@@ -4,9 +4,20 @@ import java.util.LinkedList;
 
 public class StaQue {
 	
+	 static LinkedList list=new LinkedList();
+	
+	static void toPeekPop() {
+		while ((list.isEmpty()) == false) {
+		list.peek();
+		list.pop();
+		System.out.println("The new order is: ");
+		System.out.println(list);
+		}
+	}	
+	
 	public static void main(String args[]){
 
-		 LinkedList list=new LinkedList();
+		
 
 	     //Adding elements to the Linked list
 		 list.push(70);
@@ -14,6 +25,8 @@ public class StaQue {
 		 list.push(56);
 	  
 	     System.out.println(list);
+	     
+	     toPeekPop();
 	   
 	   } 
 
