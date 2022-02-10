@@ -1,33 +1,34 @@
 package stque;
 
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class StaQue {
 	
-	 static LinkedList list=new LinkedList();
+	 static Queue list = new LinkedList();
 	
 	static void toPeekPop() {
 		while ((list.isEmpty()) == false) {
 		list.peek();
-		list.pop();
+		list.poll();
 		System.out.println("The new order is: ");
 		System.out.println(list);
 		}
 	}	
+		
+	static void enQueue(int i, int j, int k) {
+		list.add(i);
+		list.add(j);
+		list.add(k);
+		System.out.println("The new order is: ");
+		System.out.println(list);
+	}
+		
 	
 	public static void main(String args[]){
 
+		enQueue(56, 30, 70);
 		
-
-	     //Adding elements to the Linked list
-		 list.push(70);
-		 list.push(30);
-		 list.push(56);
-	  
-	     System.out.println(list);
-	     
-	     toPeekPop();
-	   
-	   } 
+	}
 
 }
